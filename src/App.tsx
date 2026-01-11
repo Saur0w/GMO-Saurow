@@ -1,6 +1,6 @@
 
 import './App.css'
-import { Index } from './components/Table/index.tsx';
+import { Index } from './components/Table';
 
 function App() {
 

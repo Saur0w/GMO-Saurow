@@ -26,13 +26,40 @@ $primary: #3B82F6;
   align-items: center;
 }
 
+.selection {
+  width: 50px;
+  text-align: center;
+}
 
-.selection { width: 50px; text-align: center; }
-.title { min-width: 250px; font-weight: 500; color: $text-primary; }
-.place { min-width: 160px; color: $text-secondary; }
-.artist { min-width: 200px; color: $text-secondary; }
-.ins { min-width: 150px; color: $text-secondary; font-size: 13px; }
-.dateStart, .dateEnd { min-width: 100px; text-align: center; color: $text-secondary; font-variant-numeric: tabular-nums; }
+.title {
+  min-width: 250px;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+.place {
+  min-width: 160px;
+  color: $text-secondary;
+}
+
+.artist {
+  min-width: 200px;
+  color: $text-secondary;
+}
+
+.ins {
+  min-width: 150px;
+  color: $text-secondary;
+  font-size: 13px;
+}
+
+.dateStart,
+.dateEnd {
+  min-width: 100px;
+  text-align: center;
+  color: $text-secondary;
+  font-variant-numeric: tabular-nums;
+}
 
 :global {
   .p-datatable {
@@ -65,14 +92,43 @@ $primary: #3B82F6;
 
   .p-paginator-current {
     color: $text-secondary;
-    font-size: 16px;
+    font-size: 14px;
     order: 1;
+    margin-right: auto;
+  }
+
+  .p-paginator-prev,
+  .p-paginator-first {
+    order: 2;
+  }
+
+  .p-paginator-prev,
+  .p-paginator-next {
+    min-width: 80px;
+    padding: 0 16px;
+
+    svg, i, span[class*="pi-"] {
+      display: none !important;
+    }
+  }
+
+  .p-paginator-prev::after {
+    content: 'Previous';
+  }
+
+  .p-paginator-next::after {
+    content: 'Next';
   }
 
   .p-paginator-pages {
     display: flex;
     align-items: center;
-    order: 2;
+    order: 3;
+  }
+
+  .p-paginator-next,
+  .p-paginator-last {
+    order: 4;
   }
 
   .p-paginator-page,
@@ -108,6 +164,9 @@ $primary: #3B82F6;
       opacity: 0.5;
     }
   }
+
+
+
   .p-paginator-rpp-options {
     display: none;
   }
